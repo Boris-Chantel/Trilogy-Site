@@ -211,8 +211,12 @@ section {
         .dots {
             margin-top: 30px;
             margin-bottom: 60px;
+            align-items: center;
             img {
                 height: 100%;
+            }
+            .arrow {
+                margin: 0 20px;
             }
         }
         .paragraph {
