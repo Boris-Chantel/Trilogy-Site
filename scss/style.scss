@@ -49,6 +49,7 @@ a {
 .row,
 .column {
     display: flex;
+    display: -webkit-flex;
 }
 
 .column {
