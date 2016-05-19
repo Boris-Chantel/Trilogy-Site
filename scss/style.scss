@@ -220,7 +220,7 @@ section {
                 // margin-bottom: 10%;
                 @include size(large) {
                     width: 80%;
-                    flex-wrap: wrap;
+                    // flex-wrap: wrap;
                 }
                 h1 {
                     margin: 50px 0;
@@ -396,43 +396,44 @@ section {
 }
 
 .gallery {
-    flex-wrap: wrap;
     margin: 100px 0;
-    .thumbs {
-        // margin-top: 5%;
-        max-width: 20%;
-        // margin-bottom: 8%;
-        @include size(large) {
-            min-width: 80%;
-            margin-top: 60px;
-            margin-bottom: 40px;
-        }
-        h1 {
-            margin: 50px 0;
-            font-family: 'Lato', sans-serif;
-            text-transform: uppercase;
-            font-size: .9em;
-            font-weight: 300;
-            letter-spacing: 3px;
-            text-align: center;
-        }
-        p {
-            text-align: justify;
-            font-family: 'Lato', sans-serif;
-            font-weight: 300;
-            letter-spacing: 1px;
-            text-align-last: center;
-            @media screen and (max-width: 640px) {
+    .section {
+        flex-wrap: wrap;
+        .thumbs {
+            width: 20%;
+            // margin-bottom: 8%;
+            @include size(large) {
+                width: 90%;
+                margin-top: 60px;
+                margin-bottom: 40px;
+            }
+            h1 {
+                margin: 50px 0;
+                font-family: 'Lato', sans-serif;
+                text-transform: uppercase;
+                font-size: .9em;
+                font-weight: 300;
+                letter-spacing: 3px;
                 text-align: center;
             }
+            p {
+                text-align: justify;
+                font-family: 'Lato', sans-serif;
+                font-weight: 300;
+                letter-spacing: 1px;
+                text-align-last: center;
+                @media screen and (max-width: 640px) {
+                    text-align: center;
+                }
+            }
         }
-    }
-    .second {
-        margin-right: 30px;
-        margin-left: 30px;
-        @include size(large) {
-            margin-top: 0;
-            margin-bottom: 0;
+        .second {
+            margin-right: 30px;
+            margin-left: 30px;
+            @include size(large) {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
         }
     }
 }
