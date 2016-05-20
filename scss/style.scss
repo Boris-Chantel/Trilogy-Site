@@ -132,8 +132,12 @@ header {
             font-weight: 300;
             background: none;
             border: 1px solid #fff;
-            // background-color: #33cccc;
             padding: 15px 30px;
+            transition: background .5s linear 0s, color .3s linear 0s;
+                &:hover {
+                    background: #fff;
+                    color: #000;
+                }
             @include size(large) {
                 font-size: .5em;
             }
@@ -615,6 +619,7 @@ section {
                 }
                 h1 {
                     color: #33cccc;
+                    margin-top: 20px;
                     @include size(medium) {
                         font-size: 1em;
                     }
