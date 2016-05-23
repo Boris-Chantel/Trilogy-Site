@@ -298,7 +298,7 @@ section {
             margin-bottom: 60px;
             @media screen and (max-width: 1319px) {
                 margin-bottom: 25px;
-                width: 30%;
+                width: 100%;
             }
             @include size(large) {
                 // width: 30%;
