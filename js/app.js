@@ -18,13 +18,15 @@ var setHeader = function() {
     } else $('nav').removeClass('scroll'); 
     console.log(y);
     
-var ypos,image;
-function parallax () {
-    ypos = window.pageYOffset();
-    image = document.getElementByID('image');
-    image.style.top = ypos * 0.4 + 'px';
-}
-window.addEventListener('scroll',parallax);
+var parallax = function() {
+    var doucmentEl = $(document), 
+    parallaxBg = $('header');
+
+    documentEl.on('scroll', function() {
+        var currScrollPos = documentEl.scrollTop();
+        parallaxBg.css('background-position', '0 ' + -currScrollPos/4 + 'px');
+    });
+};
 
 };
 
@@ -32,10 +34,3 @@ window.addEventListener('scroll',parallax);
 init();
 
 
-// var ypos,image;
-// function parallax () {
-//     ypos = window.pageYOffset;
-//     image = document.getElementByID('image');
-//     image.style.top = ypos * 0.4 + 'px';
-// }
-// window.addEventListener('scroll',parallax);

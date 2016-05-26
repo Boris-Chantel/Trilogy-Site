@@ -88,6 +88,7 @@ header {
     position: relative;
     // z-index: -1000;
     background-attachment: fixed;
+    transition: all .2s ease;
     @media screen and (max-width: 1350px) {
         height: 90vh;
         background-color: rgba(170, 173, 175, 0.07);
