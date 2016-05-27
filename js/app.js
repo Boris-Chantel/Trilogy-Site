@@ -7,6 +7,7 @@ var init = function() {
         }, 1000);
     });
     $(window).on('load scroll', setHeader);
+    $(window).on('scroll', parallax);
 
 };
 
@@ -16,19 +17,19 @@ var setHeader = function() {
     if (y > 300) {
     	$('nav').addClass('scroll');
     } else $('nav').removeClass('scroll'); 
-    console.log(y);
+};
+    
     
 var parallax = function() {
-    var doucmentEl = $(document), 
-    parallaxBg = $('header');
+    var y = $(this).scrollTop(), 
+    bg = $('.bg');
 
-    documentEl.on('scroll', function() {
-        var currScrollPos = documentEl.scrollTop();
-        parallaxBg.css('background-position', '0 ' + -currScrollPos/4 + 'px');
-    });
+    if ( y < 800 ) {
+        bg.css('top', y/2 + 'px');
+    }    
 };
 
-};
+
 
 
 init();
